@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <RootNamespace>SMTC_NowPlaying</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>momizi06</Authors>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\momiz\.nuget\packages\dubya.windowsmediacontroller\2.5.5\contentFiles\any\net8.0-windows10.0.22621\Icon.ico" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Dubya.WindowsMediaController" Version="2.5.5" />
+  </ItemGroup>
+
+</Project>

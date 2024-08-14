@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "build SMTC_NowPlaying.csproj",
+			"file": "${workspaceFolder}/SMTC_NowPlaying/SMTC_NowPlaying.csproj",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "dotnet: build SMTC_NowPlaying.csproj"
+		}
+	]
+}
