@@ -101,6 +101,12 @@ internal class Program
         mediaManager.Start();
 
         mediaSession = mediaManager.GetFocusedSession();
+        if (mediaSession == null)
+        {
+            Console.WriteLine("No session found.");
+            return;
+        }
+
         sessionInfo = await mediaSession.ControlSession.TryGetMediaPropertiesAsync();
         var songInfo = new DictInfo
         {

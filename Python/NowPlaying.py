@@ -55,11 +55,15 @@ def getSongInfo() -> dict:
         logger.info(f"Getting song information")
         logger.info(f"SMTC_EXE: {SMTC_EXE}")
         result = subprocess.run([SMTC_EXE], stdout=subprocess.PIPE)
-        result_json = result.stdout.decode("utf-8")
-        return json.loads(result_json)
     except Exception as e:
         logger.error(e)
         return None
+    result_json = result.stdout.decode("utf-8")
+    if "No session found." in result_json:
+        logger.info("No session found (Not playing music).")
+        return None
+    else:
+        return json.loads(result_json)
 
 
 def getSongUrl(title: str, artist: str, album: str) -> str:
