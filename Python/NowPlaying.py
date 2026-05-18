@@ -42,7 +42,7 @@ SERVER = "https://misskey.io"
 TOKEN = "(Write your API token here)"
 
 
-def getSongInfo() -> dict:
+def getSongInfo() -> dict | None:
     """曲情報をSMTC_EXEから取得する
 
     Details:
